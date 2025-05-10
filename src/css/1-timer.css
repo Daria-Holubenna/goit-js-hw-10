@@ -98,24 +98,28 @@
 }
 
 .flatpickr-day.selected {
-  border: 1px solid #4e75ff;
-  background-color: transparent;
+  background-color: #4e75ff;
   color: #666;
+
 }
 .flatpickr-day.selected:hover {
   background-color: transparent;
   color: #666;
 }
 .flatpickr-day.today {
+  border: 1px solid #4e75ff !important;
   color: #666;
-  background-color: transparent;
   border-radius: 100%;
-  border: none;
-}
 
+}
+.flatpickr-day.today:hover, 
+.flatpickr-day.today:focus{
+  background-color: transparent !important;
+  color: #666 !important;
+}
 .flatpickr-day:hover,
 .flatpickr-day:focus {
-  background-color: #c1c1c1;
+  background-color: #c1c1c1 !important;
 }
 .flatpickr-time {
   border-top: 1px solid #c1c1c1;

@@ -28,12 +28,14 @@ const options = {
         btnStart.disabled = false;
       }    else {
         btnStart.disabled = true;
-        iziToast.show({
-            title: 'CRITICAL ERROR:',
-            titleColor: 'red',
-            messageColor: 'red',
-            backgroundColor: 'black',
-            message: 'Please choose a date in the future' 
+        iziToast.error({
+            title: 'ERROR',
+            titleColor: '#fff',
+            messageColor: '#fff',
+            backgroundColor: '#ef4040',
+            message: 'Please choose a date in the future',
+            position: 'topRight',
+            color:'#fff'
         });
         userSelectedDate = null;
       }
@@ -52,7 +54,11 @@ const options = {
     } else{
         iziToast.warning({
             title: 'Warning',
-      message: 'Please choose a valid date in the future'
+      message: 'Please choose a valid date in the future',
+      position: 'topRight',
+      titleColor: '#fff',
+      messageColor: '#fff',
+      backgroundColor: '#ef4040'
     })
     }
  })
