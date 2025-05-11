@@ -104,7 +104,8 @@
 }
 .flatpickr-day.selected:hover {
   background-color: transparent;
-  color: #666;
+  color: #fff;
+    border: none;
 }
 .flatpickr-day.today {
   border: 1px solid #4e75ff !important;
@@ -115,7 +116,7 @@
 .flatpickr-day.today:hover, 
 .flatpickr-day.today:focus{
   background-color: transparent !important;
-  color: #666 !important;
+  background-color: #c1c1c1 !important;
 }
 .flatpickr-day:hover,
 .flatpickr-day:focus {
