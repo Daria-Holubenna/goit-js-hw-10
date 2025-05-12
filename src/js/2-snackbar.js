@@ -28,11 +28,12 @@ function valid() {
 formData.addEventListener('submit', ev => {
   ev.preventDefault();
   const inputStates = document.querySelector('input[name=state]:checked');
-
-  setTimeout(() => {
-    if (!valid()) return;
+if (!valid()) return;
+  
+    
     const delayValue = Number(delay.value);
     const promise = new Promise((resolve, reject) => {
+      setTimeout(() => {
       if (inputStates.value === 'fulfilled') {
         resolve(delayValue);
         console.log(`create with ${delayValue}`);
@@ -40,7 +41,8 @@ formData.addEventListener('submit', ev => {
         reject(delayValue);
         console.log(`NOT create ${delayValue}`);
       }
-    })
+    },Number(delay.value));
+      })
       promise
       .then(res =>
         iziToast.success({
@@ -60,5 +62,4 @@ formData.addEventListener('submit', ev => {
           titleColor: '#fff'
         })
       );
-  },Number(delay.value))
 });
